@@ -37,9 +37,9 @@ function Register(){
                 <label htmlFor="#username">Nom d'utilisateur: </label>
                 <input type="text" id="#username" value={username} onChange={e => setUsername(e.target.value)} required/>
                 <label htmlFor="#password">Mot de passe: </label>
-                <input type="text" id="#password" value={password} onChange={e => setPassword(e.target.value)} required/>
+                <input type="password" id="#password" value={password} onChange={e => setPassword(e.target.value)} required/>
                 <label htmlFor="#confirmPassword">Confirme mot de passe:</label>
-                <input type="text" id="#confirmPassword" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} required />
+                <input type="password" id="#confirmPassword" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} required />
                 <button type="submit"> Enregistrer </button>
             </form>
         </div>

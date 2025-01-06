@@ -10,6 +10,14 @@ const UserSchema = mongoose.Schema(
             type : String,
             required : [true, "please enter a password"]
         },
+        role:{
+            type : String,
+            required : [true, ""]
+        },
+        date:{
+            type: Date,
+            required : [true, ""]
+        },
         image :{
             type: String,
             required : [false]

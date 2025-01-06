@@ -1,11 +1,16 @@
 import express from "express";
-//import Users from "../models/user.model";
-import {createNewUser, findUser} from "../controllers/user.controller.js";
+import {createNewUser, logInUser, getUsername, getToken} from "../controllers/user.controller.js";
+import authenticateToken from "../middleware/auth.js";
 
 const router = express.Router();
 
 router.post("/newUser", createNewUser);
 
-router.get("/findUser", findUser);
+router.post("/logInUser", logInUser);
+
+router.post("/token", getToken);
+
+router.get("/getUsername",authenticateToken, getUsername);
+
 
 export default router;
